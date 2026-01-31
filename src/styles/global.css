@@ -1,0 +1,79 @@
+:root {
+  --grey-1: #fcfcfc;
+  --grey-2: #e5e5e5;
+  --grey-3: #737373;
+  --grey-4: #333333;
+  --white: #fff;
+  --purple-1: #f5f5ff;
+  --purple-2: #7670c8;
+  --purple-3: #4f4998;
+  --purple-4: #26225c;
+
+  --font-default: "Poppins", Helvetica, Arial, sans-serif;
+
+  --font-weight-light: 200;
+  --font-weight-regular: 400;
+  --font-weight-semibold: 500;
+
+  --font-size-body: 1rem; /* 16px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-h1: 2.25rem; /* 36px */
+  --font-size-h2: 2rem; /* 32px */
+  --font-size-h3: 1.5rem; /* 24px */
+  --font-size-h4: 1.125rem; /* 18spx */
+
+  --bg-color: var(--white);
+  --bg-color-alt: var(--purple-1);
+
+  --text-color: var(--grey-3);
+  --text-color-alt: var(--purple-4);
+  --heading-color: var(--grey-4);
+
+  --input-bg-color: var(--white);
+  --input-border-color: var(--purple-4);
+  --input-color: var(--grey-4);
+
+  --button-bg-color: var(--purple-2);
+  --button-hover-color: var(--purple-3);
+  --button-color: var(--white);
+
+  --error-color: #c42121;
+
+  @media (prefers-color-scheme: dark) {
+    --bg-color: var(--purple-4);
+    --bg-color-alt: var(--purple-3);
+
+    --text-color: var(--white);
+    --text-color-alt: var(--purple-1);
+    --heading-color: var(--white);
+
+    --input-bg-color: var(--purple-2);
+    --input-border-color: var(--purple-2);
+    --input-color: var(--white);
+
+    --button-bg-color: var(--purple-4);
+    --button-hover-color: #211d56;
+    --button-color: var(--white);
+
+    --error-color: #ff899b;
+  }
+
+  @media screen and (max-width: 479px) {
+    --font-size-h1: 1.75rem; /* 40px */
+    --font-size-h2: 1.5rem; /* 32px */
+    --font-size-h3: 1.25rem; /* 20px */
+    --font-size-h4: 1.125rem; /* 18px */
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font: var(--font-weight-regular) 100%/1.25 var(--font-default);
+  color: var(--grey-3);
+  background-color: var(--color-white);
+}

@@ -1,0 +1,88 @@
+.clinicians h2 {
+  margin: 0 0 1rem;
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-light);
+  color: var(--heading-color);
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.02);
+  border: 2px solid rgba(0, 0, 0, 0.05);
+  border-radius: 0.5rem;
+}
+
+.card h3 {
+  flex: auto 1 1;
+  margin: 0 0 0.5rem;
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-semibold);
+  color: var(--heading-color);
+}
+
+.card p {
+  margin: 0;
+  font-size: var(--font-size-body);
+  color: var(--text-color);
+}
+
+.card .distance {
+  flex: auto 0 0;
+}
+
+.card .address,
+.card .lab {
+  flex: 100% 0 0;
+  font-size: var(--font-size-sm);
+}
+
+.card .lab {
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+.card.primary {
+  margin-bottom: 3rem;
+  background: var(--bg-color-alt);
+  border-color: var(--purple-2);
+}
+
+.card.primary h3 {
+  color: var(--text-color-alt);
+  font-size: var(--font-size-h3);
+}
+
+.card.primary .address,
+.card.primary .lab {
+  font-size: var(--font-size-body);
+}
+
+.card.primary + h2 {
+  font-size: var(--font-size-h3);
+}
+
+.alternatives {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 479px) {
+  .card.primary {
+    margin-bottom: 2rem;
+  }
+  .alternatives {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .card:not(.primary) {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+  }
+}

@@ -1,0 +1,85 @@
+.form-row {
+  margin: 0 0 1rem;
+}
+
+.form-row label {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  color: var(--text-color);
+}
+
+.text-label {
+  display: block;
+  margin: 0 0 0.25rem;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0.5rem;
+  font: var(--font-weight-regular) var(--font-size-body) var(--font-default);
+  color: var(--input-color);
+  background: var(--input-bg-color);
+  border: 1px solid var(--input-border-color);
+  border-radius: 2px;
+}
+
+input[type="text"][aria-invalid="true"] {
+  border-color: var(--error-color);
+}
+
+.checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--input-bg-color);
+  border: 1px solid var(--input-border-color);
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.625rem;
+  height: 0.625rem;
+  background: transparent;
+}
+
+input[type="checkbox"]:checked::before {
+  background: var(--input-border-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  input[type="checkbox"]:checked::before {
+    background: var(--input-color);
+  }
+}
+
+.error {
+  margin-top: 0.5rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--error-color);
+}
+
+.submit {
+  padding: 1rem 1.25rem;
+  font: var(--font-weight-regular) var(--font-size-h4)/1 var(--font-default);
+  color: var(--button-color);
+  background: var(--button-bg-color);
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+}
+
+.submit:hover,
+.submit:active {
+  background: var(--button-hover-color);
+}
