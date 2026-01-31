@@ -9,10 +9,12 @@ type ClinicianCardProps = {
 };
 
 const ClinicianCard = ({ name, address, distance, labName, primary = false }: ClinicianCardProps) => {
+  const roundDistance = (distance: number) => Math.round(distance * 10) / 10;
+
   return (
     <div className={`${styles.card}${primary ? ` ${styles.primary}` : ``}`}>
       <h3>{name}</h3>
-      <p className={styles.distance}>{`${distance} mi`}</p>
+      <p className={styles.distance}>{`${roundDistance(distance)} mi`}</p>
       <p className={styles.address}>{address}</p>
       {!!labName && <p className={styles.lab}>{`Nearest lab: ${labName}`}</p>}
     </div>
