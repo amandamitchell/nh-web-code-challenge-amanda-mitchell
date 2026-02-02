@@ -10,6 +10,8 @@ I built this to be as lean as possible, considering it’s just a single page wi
 
 Given that there are no designs, I tried to base the look & feel off of the https://www.nice.healthcare/ homepage. It is optimized to fit well on a phone and to use a dark mode preference, if the user has one.
 
+In a real environment, this would need to connect to some kind of third party geolocation service to get latitude and longitude coordinates for addresses, as well as actual driving distance calculations. It’s been a long time since I had to research options in this area, but I am assuming that it would be a paid service with pricing based on the number of queries done within a given time period, and that looking up actual drive times (including live traffic data, road closures, etc.) would be more expensive than looking up coordinates.
+
 The instructions say to return the nearest clinician but I opted to list three - the nearest (highlighted) and then two alternatives. There may be situations where the nearest clinician is not the best choice, and I did not think it made sense to withhold information about the next-nearest alternatives when we do have that information. Similarly, if a lab visit is needed I included the name of the lab that the distance calculations are for.
 
 I opted to do an actual distance calculation. The lab and clinician addresses use their actual coordinates, and the entered address is associated with a randomly chosen coordinate pair out of a list of 7. Like the clinician addresses, 6 of them are in the Minneapolis area and one is in the Boulder area. The chosen address is logged to the console, so you can see which coordinates a given form submission is using.
